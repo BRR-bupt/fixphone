@@ -3,6 +3,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
+import removeConsole from 'vite-plugin-remove-console'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -13,6 +14,7 @@ export default defineConfig({
   },
   plugins: [
     vue(),
+    removeConsole(),
     AutoImport({
       // imports: ['vue', 'vue-router'],
       // resolvers: [ElementPlusResolver()],
